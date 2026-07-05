@@ -156,6 +156,9 @@ streamlit
 python-dotenv
 requests
 ```
+## 🚀 Live Demo
+
+🔗 https://sahara-iof3g7ls4-palak-soni-s-projects.vercel.app
 
 ---
 
