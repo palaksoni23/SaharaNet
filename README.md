@@ -158,7 +158,7 @@ requests
 ```
 ## 🚀 Live Demo
 
-🔗 https://sahara-iof3g7ls4-palak-soni-s-projects.vercel.app
+https://saharanet-nz2ny3zep8796j368ckmln.streamlit.app/
 
 ---
 
