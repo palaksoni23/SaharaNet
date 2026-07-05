@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaharaNet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo">🫂 Sahara<span>Net</span></div>
+
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <p class="hero-sub">Multilingual AI emergency response for India's street families</p>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-num">1.8M+</div>
+                    <div class="stat-lbl">Street Children</div>
+                    <div class="stat-tag">↑ India</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">6</div>
+                    <div class="stat-lbl">AI Agents</div>
+                    <div class="stat-tag">↑ Working together</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">6+</div>
+                    <div class="stat-lbl">Languages</div>
+                    <div class="stat-tag">↑ Supported</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CHAT -->
+        <section class="chat-section">
+            <div class="chat-box" id="chatBox">
+                <div class="msg assistant">
+                    <div class="msg-avatar">🤖</div>
+                    <div class="msg-bubble">
+                        <p><strong>🙏 Namaste! Main SaharaNet hun.</strong></p>
+                        <p>If you have seen any family or child in need on the road — please tell me. I will immediately
+                            find the nearest shelter, hospital, and food center.</p>
+                        <p>🎤 You can also speak using the mic button above!</p>
+                        <p><em>You can write in any language — Hindi, English, or Hinglish.</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Output Area -->
+            <div id="resourceArea"></div>
+
+            <!-- Input -->
+            <div class="input-wrap">
+                <textarea id="userInput" placeholder="Describe what you see… (Hindi / English / Hinglish)" rows="1"
+                    onkeydown="handleKey(event)"></textarea>
+                <button class="send-btn" onclick="sendReport()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- PIPELINE -->
+        <section class="pipeline-section">
+            <div class="pipeline-label">Agent Pipeline</div>
+            <div class="pipeline-row">
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🎤</div>
+                    <div class="pipeline-name">Reporter</div>
+                </div>
+                <div class="pipeline-arr">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🌐</div>
+                    <div class="pipeline-name">Language</div>
+                </div>
+                <div class="pipeline-arr">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🔍</div>
+                    <div class="pipeline-name">Verify</div>
+                </div>
+                <div class="pipeline-arr">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🛡️</div>
+                    <div class="pipeline-name">Safety</div>
+                </div>
+                <div class="pipeline-arr">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🗺️</div>
+                    <div class="pipeline-name">Resources</div>
+                </div>
+                <div class="pipeline-arr">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">🧠</div>
+                    <div class="pipeline-name">Memory</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

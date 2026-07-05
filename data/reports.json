@@ -1,0 +1,23 @@
+[
+  {
+    "location": "Alwar, Rajasthan",
+    "emergency_type": "medical",
+    "priority": "high",
+    "timestamp": "2026-06-21 11:24:01.623842",
+    "confidence_score": 0.9
+  },
+  {
+    "location": "Alwar, Rajasthan",
+    "emergency_type": "shelter",
+    "priority": "critical",
+    "timestamp": "2026-06-21 11:24:01.626786",
+    "confidence_score": 0.95
+  },
+  {
+    "location": "Alwar, Rajasthan",
+    "emergency_type": "Medical and Shelter Emergency",
+    "priority": "High",
+    "timestamp": "2026-06-21 11:39:29.934310",
+    "confidence_score": 0.9
+  }
+]
