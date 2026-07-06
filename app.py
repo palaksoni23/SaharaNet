@@ -920,7 +920,14 @@ URGENCY: medical/child alone/accident = high. Shelter need = high. Food need = m
         </div>
     </div>""")
 
-    # Voice button — FIXED: st.components.v1.html is deprecated, using st.iframe instead
+    # Voice button — st.iframe renders raw HTML/JS in a sandboxed iframe.
+    # FIXED: the "Didn't" apostrophe used to be escaped as \' inside this Python
+    # triple-quoted string. Python itself consumes that backslash (regardless of
+    # quote style), so the JS that reached the browser had a bare, unescaped
+    # apostrophe sitting inside a single-quoted JS string. That broke the JS
+    # parser for the WHOLE script block, so no click handlers were ever attached
+    # — the button looked normal but did nothing. Replaced with an apostrophe-free
+    # string so nothing gets mangled on the way from Python to JS.
     st.iframe("""<!DOCTYPE html><html><head><style>
     *{margin:0;padding:0;box-sizing:border-box;}
     body{background:transparent;font-family:Inter,sans-serif;padding:10px 0 4px;}
@@ -959,7 +966,7 @@ URGENCY: medical/child alone/accident = high. Shelter need = high. Food need = m
         r.onspeechstart=function(){s.textContent='🎙️ Voice detected...';};
         r.onresult=function(e){var interim='',fin='';for(var i=0;i<e.results.length;i++){if(e.results[i].isFinal)fin+=e.results[i][0].transcript;else interim+=e.results[i][0].transcript;}s.textContent='📝 '+(fin||interim);if(fin)send(fin.trim());};
         r.onend=function(){b.className='';b.innerHTML='🎤 &nbsp;Report by voice';};
-        r.onerror=function(e){b.className='';b.innerHTML='🎤 &nbsp;Report by voice';var m={'no-speech':'⚠️ Didn\'t hear anything','audio-capture':'❌ Microphone not found','not-allowed':'❌ Please allow microphone access'};s.textContent=m[e.error]||'❌ '+e.error;};
+        r.onerror=function(e){b.className='';b.innerHTML='🎤 &nbsp;Report by voice';var m={'no-speech':'⚠️ Did not hear anything','audio-capture':'❌ Microphone not found','not-allowed':'❌ Please allow microphone access'};s.textContent=m[e.error]||'❌ '+e.error;};
         r.start();
     }
     </script></body></html>""", height=55)
