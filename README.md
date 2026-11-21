@@ -162,4 +162,8 @@ https://saharanet-nz2ny3zep8796j368ckmln.streamlit.app/
 
 ---
 
+# SaharaNet is also available as an agent skill on Agensi:
+
+https://www.agensi.io/skills/saharanet-emergency-response
+
 *Built with ❤️ for India's 1.8 million street children and homeless families.*
