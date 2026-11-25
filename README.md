@@ -162,6 +162,15 @@ https://saharanet-nz2ny3zep8796j368ckmln.streamlit.app/
 
 ---
 
+---
+
+## 🚀 GrowthX Off Campus
+
+This project is showcased as part of
+**Off Campus by GrowthX, sponsored by AWS.**
+
+Application Code: `P6NN9W`
+
 # SaharaNet is also available as an agent skill on Agensi:
 
 https://www.agensi.io/skills/saharanet-emergency-response
